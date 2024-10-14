@@ -40,12 +40,34 @@ header, footer {
 h1 {
     color: var(--color-contrast);
     font-family: 'Nerko One', cursive;
+    text-shadow: 1px 1px 1px #282529BD;
+    font-weight: 500;
+    font-size: 3em;
 }
 
 
+/* flex utility */
 
+.d-flex {
+    display: flex;
+}
 
+.j-center {
+    justify-content: center;
+}
 
+.a-center {
+    align-items: center;
+}
+
+.s-between {
+    justify-content: space-between;
+}
+/* text */
+
+.upper {
+    text-transform: uppercase;
+}
 /* media query */
 
 /* @media screen and (min-width: 576px) {
