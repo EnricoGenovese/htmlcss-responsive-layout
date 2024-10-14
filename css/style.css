@@ -29,6 +29,7 @@
 body {
     font-family: 'Monsterrat', 'Helvetica Neue', sans-serif;
     color: var(--color-black);
+    font-weight: 300;
 }
 
 img {
@@ -48,6 +49,13 @@ li {
     padding: 10px 0;
 }
 
+footer a {
+    color: var(--color-white);
+}
+
+footer li {
+    width: 25%;
+}
 /* containers */
 
 .container {
@@ -62,12 +70,22 @@ li {
 .social {
     height: 40px;
     width: 50px;
-    display: block;
+    /* display: block; */
     border-radius: 40%;
     align-items: center;
 }
 
+.presentation img {
+    width: 70%;
+    margin-bottom: 20px;
+}
 
+/* .presentation::after {
+    border: 2px solid var(--color-contrast);
+    height: 2px;
+    width: 100px;
+} */
+   
 /* page */
 
 header, footer {
@@ -78,7 +96,6 @@ main {
     padding: 20px;
     background-color: var(--color-bg-color);
 }
-
 
 h1 {
     color: var(--color-contrast);
@@ -106,6 +123,12 @@ h1 {
     justify-content: space-between;
 }
 
+.s-around {
+    justify-content: space-around;
+}
+.f-wrap {
+    flex-wrap: wrap;
+}
 /* display utility */
 
 .d-none {
@@ -120,6 +143,14 @@ h1 {
 
 .bold {
     font-weight: 700;
+}
+
+.no-deco {
+    text-decoration: none;
+}
+
+.c-text {
+    text-align: center;
 }
 
 /* text - colors */
