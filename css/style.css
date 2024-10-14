@@ -28,8 +28,35 @@
 
 body {
     font-family: 'Monsterrat', 'Helvetica Neue', sans-serif;
+    color: var(--color-black);
 }
 
+img {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    margin-top: 20px;
+}
+
+ul {
+    list-style-type: none;
+    margin-left: 20px;
+    padding: 20px 0;
+}
+
+li {
+    padding: 10px 0;
+}
+/* containers */
+
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.recipe {
+    width: 100%;
+}
 
 /* page */
 
@@ -37,6 +64,10 @@ header, footer {
     min-height: 70px;
 }
 
+main {
+    padding: 20px;
+    background-color: var(--color-bg-color);
+}
 h1 {
     color: var(--color-contrast);
     font-family: 'Nerko One', cursive;
@@ -63,11 +94,36 @@ h1 {
 .s-between {
     justify-content: space-between;
 }
+
 /* text */
 
 .upper {
     text-transform: uppercase;
 }
+
+.bold {
+    font-weight: 700;
+}
+/* text - colors */
+
+.text-dark {
+    color: var(--color-dark-text);
+}
+
+.text-white {
+    color: var(--color-white);
+}
+
+/* background colors */
+
+.bg-white {
+    background-color: var(--color-white);
+}
+
+.bg-primary {
+    background-color: var(--color-primary);
+}
+
 /* media query */
 
 /* @media screen and (min-width: 576px) {
