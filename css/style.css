@@ -8,9 +8,9 @@
 
 /* debug */
 
-.debug {
+/* .debug {
     border: 1px solid red;
-}
+} */
 
 /* root */
 :root {
@@ -47,16 +47,26 @@ ul {
 li {
     padding: 10px 0;
 }
+
 /* containers */
 
 .container {
     max-width: 1080px;
-    margin: 0 auto;
+    margin: 20px auto;
 }
 
 .recipe {
     width: 100%;
 }
+
+.social {
+    height: 40px;
+    width: 50px;
+    display: block;
+    border-radius: 40%;
+    align-items: center;
+}
+
 
 /* page */
 
@@ -68,6 +78,8 @@ main {
     padding: 20px;
     background-color: var(--color-bg-color);
 }
+
+
 h1 {
     color: var(--color-contrast);
     font-family: 'Nerko One', cursive;
@@ -75,7 +87,6 @@ h1 {
     font-weight: 500;
     font-size: 3em;
 }
-
 
 /* flex utility */
 
@@ -95,6 +106,12 @@ h1 {
     justify-content: space-between;
 }
 
+/* display utility */
+
+.d-none {
+    display: none;
+}
+
 /* text */
 
 .upper {
@@ -104,6 +121,7 @@ h1 {
 .bold {
     font-weight: 700;
 }
+
 /* text - colors */
 
 .text-dark {
@@ -124,6 +142,15 @@ h1 {
     background-color: var(--color-primary);
 }
 
+/* icon-colors */
+
+.icon-blue {
+    color: var(--color-icon-blue);
+}
+
+.icon-red {
+    color: var(--color-icon-red)
+}
 /* media query */
 
 /* @media screen and (min-width: 576px) {
