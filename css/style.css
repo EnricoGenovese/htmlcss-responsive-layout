@@ -63,7 +63,7 @@ footer li {
     margin: 20px auto;
 }
 
-.recipe {
+.tiramisù {
     width: 100%;
 }
 
@@ -80,11 +80,11 @@ footer li {
     margin-bottom: 20px;
 }
 
-/* .presentation::after {
-    border: 2px solid var(--color-contrast);
+.presentation h3::after {
+    border-color: var(--color-contrast);
     height: 2px;
     width: 100px;
-} */
+}
    
 /* page */
 
@@ -189,9 +189,52 @@ h1 {
 } */
 
 @media screen and (min-width: 768px) {
+   
+    .description {
+        display: block;
+    }
 
-}
+    .recipe {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
 
-@media screen and (min-width: 992px) {
+    .recipe li {
+        width: calc(100% / 3);
+    }
+
+    .social {
+        width: calc(100% / 6);
+        border-radius: 25px;
+    }
+
+    .ads {
+        display: block;
+        width: 100%;
+    }
+
+    .pres-img {
+        display: block;
+        float: left;
+        width: 30%;
+    }
+
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+    }
+    footer li {
+        width: calc(100% / 5);
+    }
+
+/* @media screen and (min-width: 992px) {
     
-}
+} */
