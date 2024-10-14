@@ -1,0 +1,61 @@
+/* reset */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* debug */
+
+.debug {
+    border: 1px solid red;
+}
+
+/* root */
+:root {
+    --color-white: #ffffff;
+    --color-bg-color: #d9d9d9;
+    --color-primary: #7c69a4;
+    --color-dark-text: #4e3969;
+    --color-black: #282529;
+    --color-contrast: #fa961a;
+    --color-icon-red: #ea5556;
+    --color-icon-blue: #2871f0;
+}
+
+/* general */
+
+body {
+    font-family: 'Monsterrat', 'Helvetica Neue', sans-serif;
+}
+
+
+/* page */
+
+header, footer {
+    min-height: 70px;
+}
+
+h1 {
+    color: var(--color-contrast);
+    font-family: 'Nerko One', cursive;
+}
+
+
+
+
+
+/* media query */
+
+/* @media screen and (min-width: 576px) {
+                BONUS
+} */
+
+@media screen and (min-width: 768px) {
+
+}
+
+@media screen and (min-width: 992px) {
+    
+}
