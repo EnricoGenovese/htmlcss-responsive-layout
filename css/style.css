@@ -70,11 +70,13 @@ footer li {
 .social {
     height: 40px;
     width: 50px;
-    /* display: block; */
     border-radius: 40%;
     align-items: center;
 }
 
+.logo {
+    display: none;
+}
 .presentation img {
     width: 70%;
     margin-bottom: 20px;
@@ -129,6 +131,7 @@ h1 {
 .f-wrap {
     flex-wrap: wrap;
 }
+
 /* display utility */
 
 .d-none {
@@ -189,6 +192,10 @@ h1 {
 } */
 
 @media screen and (min-width: 768px) {
+
+    h1 {
+        justify-content: flex-start;
+    }
    
     .description {
         display: block;
@@ -211,7 +218,8 @@ h1 {
 
     .ads {
         display: block;
-        width: 100%;
+        max-width: 100%;
+        margin-bottom: 40px; 
     }
 
     .pres-img {
@@ -226,7 +234,6 @@ h1 {
         display: table;
     }
 
-
     footer {
         display: flex;
         justify-content: space-between;
@@ -234,7 +241,43 @@ h1 {
     footer li {
         width: calc(100% / 5);
     }
+}
+@media screen and (min-width: 992px) {
 
-/* @media screen and (min-width: 992px) {
-    
-} */
+        .container {
+            margin: 20px auto;
+        }
+        
+        .tiramisù {
+            display: flex;
+        }
+
+        .video {
+            width: 70%;
+        }
+
+        .recipe {
+            flex-direction: column;
+        }
+
+        .logo {
+            display: block;
+            color: var(--color-black);
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-left: 5px;
+        }
+        
+        footer section {
+            display: flex;
+            /* align-items: center; */
+            justify-content: space-between;
+            /* width: 1080px; */
+        }
+
+        .legal {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+}       
