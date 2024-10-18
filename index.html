@@ -9,53 +9,65 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nerko+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="./css/style.css">
     <title>Giallo Booleano</title>
 </head>
 <body>
-    <!-- header con titolo in giallo e font Nerko One, cursive -->
-    <header class="d-flex j-center a-items upper f-start debug">
+    <!-- header centrato in mobile, a destra con risoluzioni superiori -->
+    <header class="container">
         <h1>Giallo Booleano</h1>
     </header>
-    <!-- main -->
-    <main class="debug">
-        <section class="container debug">
-            <div class="upper">
-                <p>Dolci e desserts</p>
-                <div>
-                    <h2 class="text-dark d-flex">
-                    Tiramisù<span class="d-none description"> (Dolce Tradizionale)</span>
-                    </h2>
-                </div>
+    <!-- main: in mobile centrato; flex ricetta in desktop  -->
+    <main class=" container f-start">
+        <section> <!-- titolo + foto + ricetta in breve-->
+            <div class="d-flex flex-col s-around">
+                <p class="upper">
+                    dolci e dessert 
+                </p>
+                <h2 class="text-dark d-flex p-20"> <!-- testo tra parentesi nascosto fino da tablet in su -->
+                    Tiramisù<span class="d-none description">&thinsp;(Dolce Tradizionale)</span>
+                </h2>
             </div>
-            <div class="container tiramisù debug">
-                <div class="video">
-                    <img src="./img/image-recipe.png" alt="">
+            <div class=" container recipe"> <!--immagine-->
+                <div class="recipe-img">
+                    <img src="./img/image-recipe.png" alt="recipe-image">
                 </div>
-                <div class="container recipe bg-white">
+                <div class="short-steps bg-white">
                     <h3>In breve</h3>
-                    <ul class="in-short">
-                        <li>
-                            Difficoltà:<span class="bold"> Facile</span>
+                    <ul class="">
+                        <li>Difficolità: 
+                            <span class="bold">
+                                Facile
+                            </span>
+                        </li>
+                        <li>Tempo: 
+                            <span class="bold">
+                                40 minuti
+                            </span>
+                        </li>
+                        <li>Porzione per:
+                            <span class="bold">
+                                8 persone
+                            </span>
+                        </li>
+                        <li>Costo:
+                            <span class="bold">
+                                contenuto
+                            </span>
                         </li>
                         <li>
-                            Tempo: <span class="bold"> 40 minuti</span>
-                        </li>
-                        <li>
-                            Porzione per: <span class="bold"> 8 persone</span>
-                        </li>
-                        <li>
-                            Costo: <span class="bold"> contenuto</span>
-                        </li>
-                        <li>
-                            <span class="bold">Note:</span> +2 ore di riposo in frigo
+                            <span class="bold">
+                                Note:
+                            </span>
+                            +2 ore di riposo in frigo
                         </li>
                     </ul>
                 </div>
-            </div>   
+            </div>
         </section>
-        <section class="container d-flex s-between debug"> <!-- Loghi social -->
+        <!-- loghi: solo simboli circolari in mobile; bottoni in tablet e bottoni con nome uppercase in desktop -->
+        <div class="container d-flex s-between debug p-20">
             <div class="social d-flex j-center bg-white">
                 <a href="" class="d-flex j-center no-deco">
                     <i class="fa-brands fa-facebook icon-blue">
@@ -87,40 +99,49 @@
                     <p class="logo">youtube</p>
                 </a>
             </div>
-        </section>
+        </div>
+        <!-- banner pubblicitario, visibile da risoluzione tablet in su -->
         <div class="ads d-none">
             <img src="./img/banner.png" alt="ads banner">
         </div>
-        <section class="contiainer presentation clearfix">
+        <!-- presentazione della ricetta, la foto è in float da risoluzione tablet in su -->
+        <section class="contiainer clearfix">
             <h3 class="upper">Presentation</h3>
-            <div class="d-flex j-center pres-img">
-                <img src="./img/tiramisu.jpg" alt="tiramisù">
+
+            <div class="container clearfix">
+                <div class="presentation">
+                    <img src="./img/tiramisu.jpg" alt="tiramisù" class="presentation">
+                </div>
+                <div>
+                    <p class="ver-padding">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam ullam sit labore nemo. Porro recusandae asperiores ea minima accusamus. Rerum corrupti placeat aliquam illo. Animi neque fugit nostrum quasi voluptate cupiditate dolore soluta quis exercitationem esse quos assumenda veritatis possimus nemo in autem error ducimus, commodi recusandae <span class="bold">itaque rerum quam.</span> Consectetur quaerat rem odit neque, inventore natus ab veniam quae quisquam architecto eveniet quos minus et cupiditate nisi id dolorem illo facilis, numquam distinctio nobis, dolorum tenetur? Blanditiis doloribus laudantium voluptatem corrupti consequatur, saepe pariatur magnam inventore tenetur, beatae harum culpa, ipsam corporis dicta doloremque officiis ipsum odit! Eius corrupti doloribus, rerum quod quis ipsa, modi sapiente eligendi dignissimos, esse excepturi alias reprehenderit nihil quidem! Corporis ab velit aperiam? <span class="bold">Saepe quis hic minima optio a nesciunt,</span> corporis earum quidem. Quis repellat excepturi deleniti sapiente! Laboriosam nulla libero corrupti quisquam sunt officia laborum quaerat excepturi eius repellat. At esse voluptas aperiam! Architecto, assumenda facere fugiat iure autem aut commodi corporis animi similique eum voluptatem quasi quidem explicabo provident asperiores itaque voluptates! Dignissimos, sed sint. Voluptate sint commodi reiciendis nemo quos libero magni eligendi fugiat suscipit explicabo nulla doloremque <span class="bold">consequuntur corrupti nostrum</span> rem saepe, aliquam placeat nam quidem velit. Incidunt tempora, saepe et adipisci libero praesentium modi ad quibusdam, perspiciatis harum, facere commodi obcaecati facilis molestias consectetur ipsa assumenda?
+                </p>
+                </div>
             </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam ullam sit labore nemo. Porro recusandae asperiores ea minima accusamus. Rerum corrupti placeat aliquam illo. Animi neque fugit nostrum quasi voluptate cupiditate dolore soluta quis exercitationem esse quos assumenda veritatis possimus nemo in autem error ducimus, commodi recusandae <span class="bold">itaque rerum quam.</span> Consectetur quaerat rem odit neque, inventore natus ab veniam quae quisquam architecto eveniet quos minus et cupiditate nisi id dolorem illo facilis, numquam distinctio nobis, dolorum tenetur? Blanditiis doloribus laudantium voluptatem corrupti consequatur, saepe pariatur magnam inventore tenetur, beatae harum culpa, ipsam corporis dicta doloremque officiis ipsum odit! Eius corrupti doloribus, rerum quod quis ipsa, modi sapiente eligendi dignissimos, esse excepturi alias reprehenderit nihil quidem! Corporis ab velit aperiam? <span class="bold">Saepe quis hic minima optio a nesciunt,</span> corporis earum quidem. Quis repellat excepturi deleniti sapiente! Laboriosam nulla libero corrupti quisquam sunt officia laborum quaerat excepturi eius repellat. At esse voluptas aperiam! Architecto, assumenda facere fugiat iure autem aut commodi corporis animi similique eum voluptatem quasi quidem explicabo provident asperiores itaque voluptates! Dignissimos, sed sint. Voluptate sint commodi reiciendis nemo quos libero magni eligendi fugiat suscipit explicabo nulla doloremque <span class="bold">consequuntur corrupti nostrum</span> rem saepe, aliquam placeat nam quidem velit. Incidunt tempora, saepe et adipisci libero praesentium modi ad quibusdam, perspiciatis harum, facere commodi obcaecati facilis molestias consectetur ipsa assumenda?
-            </p>
         </section>
     </main>
-    <!-- footer bg-primary + white text -->
+    <!-- footer: 2 div flex column mobile e tablet, space between in desktop -->
     <footer class="bg-primary text-white debug">
-        <section class="container">
-            <div class="legal">
-                <h5 class="bold c-text">
-                    &copy; 2021 Booleano S.p.a
-                </h5>
-                <p class="c-text">
-                    Via Tal dei Tali, 10 - 88046 Lamezia Terme - VAT 403088293200
-                </p>
-            </div>
-            <div class=" container d-flex s-between">
-                <ul class="d-flex s-around f-wrap">
-                    <li><a href="#">About us</a></li>
-                    <li><a href="#">Terms of use</a></li>
-                    <li ><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Cookie Policy</a></li>
-                    <li><a href="#">Disclaimer</a></li>
-                </ul>
-            </div>
-        </section>
+        <div class="container">
+            <h5 class="bold">
+                &copy; 2021 Booleano S.p.a
+            </h5>
+            <p class="c-text">
+                Via Tal dei Tali, 10 - 88046 Lamezia Terme - VAT 403088293200
+            </p>
+        </div>
+        <div class="container d-flex j-center c-text">
+            <ul class="d-flex j-center a-center  f-wrap">
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Terms of use</a></li>
+                <li ><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Cookie Policy</a></li>
+                <li><a href="#">Disclaimer</a></li>
+            </ul>
+        </div>
+
     </footer>
+
+
+
 </body>
-</html>
+</html> 

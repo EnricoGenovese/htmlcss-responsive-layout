@@ -39,30 +39,41 @@ img {
     margin-top: 20px;
 }
 
-ul {
+ul, li  {
     list-style-type: none;
+}
+
+main ul {
     margin-left: 20px;
     padding: 20px 0;
 }
 
-li {
+main li {
     padding: 10px 0;
+    flex-shrink: 0;
+}
+
+main h3  {
+    padding-left: 20px;
+    padding-top: 20px;
 }
 
 footer a {
     color: var(--color-white);
+    display: block;
 }
 
 footer li {
-    width: 25%;
+    padding: 10px 10px;
 }
 
 /* containers */
 
 .container {
     max-width: 1080px;
-    margin: 20px auto;
+    margin: 0 auto;
 }
+
 
 .tiramisù {
     width: 100%;
@@ -78,9 +89,15 @@ footer li {
 .logo {
     display: none;
 }
+
+.pres-img {
+    display: flex;
+    justify-content: center;
+}
+
 .presentation img {
     width: 70%;
-    margin-bottom: 20px;
+    margin: 0 auto;
 }
 
 .presentation h3::after {
@@ -96,6 +113,10 @@ header, footer {
     min-height: 70px;
 }
 
+header {
+    text-align: center;
+}
+
 main {
     padding: 20px;
     background-color: var(--color-bg-color);
@@ -109,10 +130,26 @@ h1 {
     font-size: 3em;
 }
 
+footer {
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer h5 {
+    text-align: center;
+}
+
 /* flex utility */
 
 .d-flex {
     display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
 }
 
 .j-center {
@@ -138,6 +175,16 @@ h1 {
 
 .d-none {
     display: none;
+}
+
+/* spacing-utility */
+
+.p-20 {
+    padding: 20px 0;
+}
+
+.pb-20 {
+    padding-bottom: 20px;
 }
 
 /* text */
@@ -187,6 +234,7 @@ h1 {
 .icon-red {
     color: var(--color-icon-red)
 }
+
 /* media query */
 
 /* @media screen and (min-width: 576px) {
@@ -195,18 +243,21 @@ h1 {
 
 @media screen and (min-width: 768px) {
 
-    .f-start {
-        justify-content: flex-start;
+    header {
+        text-align: left;
     }
-   
+    
+    h1 {
+        margin-left: 20px;
+    }
+
     .description {
         display: block;
     }
 
-    .recipe {
+    .recipe ul {
         display: flex;
         flex-wrap: wrap;
-        align-items: flex-start;
     }
 
     .recipe li {
@@ -224,11 +275,18 @@ h1 {
         margin-bottom: 40px; 
     }
 
-    .pres-img {
+    .presentation {
         display: block;
-        float: left;
-        width: 30%;
+        width: 50%;
     }
+
+    .presentation img {
+        float: left;
+    }
+
+    .pres-img {
+         display: block;
+        }
 
     .clearfix::after {
         content: "";
@@ -238,51 +296,79 @@ h1 {
 
     footer {
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
     }
-    footer li {
-        width: calc(100% / 5);
-    }
-}
+    
+} 
+
 @media screen and (min-width: 992px) {
 
-        .container {
-            margin: 20px auto;
-        }
-        
-        .tiramisù {
-            display: flex;
-        }
+    main ul {
+        display: flex;
+        flex-direction: column;
+    }
 
-        .video {
-            width: 70%;
-        }
+    main ul {
+        margin-left: 0;
+        padding: 10px;
+    }
 
-        .recipe {
-            margin: 20px 0
-        }
+    main h3  {
+        padding-left: 10px;
+    }
+    
 
-        .in-short {
-            flex-direction: column;
-        }
+    img {
+        margin-top: 0;
+    }
 
-        .logo {
-            display: block;
-            color: var(--color-black);
-            text-transform: uppercase;
-            font-weight: bold;
-            margin-left: 5px;
-        }
-        
-        footer section {
-            display: flex;
-            justify-content: space-between;
+    .recipe {
+        display: flex;
+    }
 
-        }
+    .recipe-img img {
+        width: auto;
+    }
 
-        .legal {
-            display: flex;
-            justify-content: space-between;
-            flex-direction: column;
-        }
+    .presentation img {
+        width: 100%;
+        margin-bottom: 0;
+        padding: 5px;
+        margin: 0;
+    }
+
+    .recipe {
+        margin: 0;
+    }
+
+    .recipe li {
+        width: auto;
+    }
+    
+    .tiramisù {
+        display: flex;
+    }
+
+    .in-short {
+        flex-direction: column;
+    }
+
+    .logo {
+        display: block;
+        color: var(--color-black);
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-left: 5px;
+    }
+    
+
+    footer {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    footer h5 {
+        text-align: left;
+    }
 }       
